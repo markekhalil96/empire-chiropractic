@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Empire Chiropractic and Rehab, LLC | Sports Chiropractor Houston, TX</title>
+<meta name="description" content="Your Body is your Kingdom. Empire Chiropractic and Rehab in Houston, TX offers chiropractic adjustments, spinal decompression, sports & auto injury care, massage therapy, cupping & IASTM. Schedule your first visit today." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0c2c4e;
+    --navy-deep:#081f38;
+    --navy-soft:#13406b;
+    --gold:#c9a04e;
+    --gold-soft:#e3c98b;
+    --ink:#16202b;
+    --slate:#5b6b7c;
+    --line:#e7ecf2;
+    --cream:#f7f9fc;
+    --white:#ffffff;
+    --radius:18px;
+    --shadow:0 18px 50px -22px rgba(12,44,78,.45);
+    --shadow-sm:0 8px 24px -14px rgba(12,44,78,.4);
+    --maxw:1200px;
+    --serif:"Cormorant Garamond",Georgia,serif;
+    --sans:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.65;
+    font-size:clamp(15px,1vw + 13px,17px);
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;height:auto}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(18px,5vw,40px)}
+  section{padding-block:clamp(56px,8vw,110px)}
+  h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing:.01em;color:var(--navy)}
+  .eyebrow{
+    font-family:var(--sans);font-weight:700;text-transform:uppercase;
+    letter-spacing:.22em;font-size:clamp(11px,1.1vw,13px);color:var(--gold);
+    display:inline-flex;align-items:center;gap:.6em;margin-bottom:14px;
+  }
+  .eyebrow::before{content:"";width:32px;height:1px;background:var(--gold)}
+  .center .eyebrow::after{content:"";width:32px;height:1px;background:var(--gold)}
+  .center{text-align:center}
+  .center .eyebrow{justify-content:center}
+  .lead{color:var(--slate);font-size:clamp(16px,1.4vw,19px);max-width:62ch}
+  .center .lead{margin-inline:auto}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.55em;
+    font-family:var(--sans);font-weight:700;font-size:14px;letter-spacing:.04em;
+    padding:15px 30px;border-radius:999px;cursor:pointer;border:1.5px solid transparent;
+    transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease;
+    white-space:nowrap;
+  }
+  .btn-gold{background:linear-gradient(135deg,var(--gold),#b8893a);color:#fff;box-shadow:0 12px 28px -12px rgba(184,137,58,.8)}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 18px 34px -12px rgba(184,137,58,.9)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{transform:translateY(-2px);background:var(--navy-soft)}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+  .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+  .btn-outline{background:transparent;color:var(--navy);border-color:var(--navy)}
+  .btn-outline:hover{background:var(--navy);color:#fff}
+
+  /* ===== Header ===== */
+  header.site{
+    position:sticky;top:0;z-index:60;background:rgba(255,255,255,.92);
+    backdrop-filter:blur(12px);border-bottom:1px solid var(--line);
+  }
+  .topbar{background:var(--navy);color:#dbe7f3;font-size:13px}
+  .topbar .wrap{display:flex;flex-wrap:wrap;gap:6px 26px;align-items:center;justify-content:space-between;padding-block:8px}
+  .topbar a{display:inline-flex;align-items:center;gap:7px;font-weight:500}
+  .topbar a:hover{color:#fff}
+  .topbar .tb-right{display:flex;gap:22px;flex-wrap:wrap}
+  .navrow{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+  .brand img{height:clamp(46px,6vw,62px);width:auto}
+  nav.main{display:flex;align-items:center;gap:clamp(16px,2vw,30px)}
+  nav.main a{font-weight:600;font-size:14.5px;color:var(--ink);position:relative;padding:4px 0}
+  nav.main a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--gold);transition:width .3s}
+  nav.main a:hover{color:var(--navy)}
+  nav.main a:hover::after{width:100%}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .menu-toggle{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+  .menu-toggle span{width:26px;height:2.5px;background:var(--navy);border-radius:2px;transition:.3s}
+
+  /* ===== Hero ===== */
+  .hero{position:relative;min-height:clamp(560px,88vh,860px);display:flex;align-items:center;color:#fff;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:
+    linear-gradient(115deg,rgba(8,31,56,.93) 0%,rgba(8,31,56,.78) 42%,rgba(8,31,56,.35) 100%),
+    url('https://static.wixstatic.com/media/2d0c9a_3af91733876446e580654f1623a858fc~mv2.png/v1/fill/w_1400,h_1080,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/2d0c9a_3af91733876446e580654f1623a858fc~mv2.png');
+    background-size:cover;background-position:center right;z-index:0}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 20% 50%,transparent 40%,rgba(8,31,56,.55))}
+  .hero .wrap{position:relative;z-index:2}
+  .hero-inner{max-width:680px}
+  .hero h1{color:#fff;font-size:clamp(40px,7vw,76px);line-height:1.02;margin-bottom:22px}
+  .hero h1 .accent{color:var(--gold-soft);display:block;font-style:italic;font-weight:500}
+  .hero p{font-size:clamp(16px,1.6vw,20px);color:#dbe7f3;max-width:52ch;margin-bottom:34px}
+  .hero-btns{display:flex;flex-wrap:wrap;gap:14px}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:14px 30px;margin-top:40px;padding-top:30px;border-top:1px solid rgba(255,255,255,.16)}
+  .hero-meta div{display:flex;flex-direction:column}
+  .hero-meta b{font-family:var(--serif);font-size:clamp(22px,3vw,30px);color:#fff;font-weight:600}
+  .hero-meta span{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-soft)}
+
+  /* ===== Trust strip ===== */
+  .trust{background:var(--navy-deep);color:#cfe0f0}
+  .trust .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:18px 44px;padding-block:22px;text-align:center}
+  .trust span{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:14px}
+  .trust .dot{color:var(--gold)}
+
+  /* ===== About ===== */
+  .about-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(34px,5vw,70px);align-items:center}
+  .about-media{position:relative}
+  .about-media img{border-radius:var(--radius);box-shadow:var(--shadow);width:100%;object-fit:cover;aspect-ratio:4/5}
+  .about-media .badge{
+    position:absolute;left:-18px;bottom:-18px;background:var(--gold);color:#1d1402;
+    padding:20px 26px;border-radius:16px;box-shadow:var(--shadow-sm);max-width:230px}
+  .about-media .badge b{display:block;font-family:var(--serif);font-size:34px;line-height:1}
+  .about-media .badge span{font-size:13px;font-weight:600;letter-spacing:.03em}
+  .about h2{font-size:clamp(30px,4.4vw,48px);margin-bottom:18px}
+  .about p + p{margin-top:16px}
+  .about .lead{margin-bottom:26px}
+  .sig{margin-top:28px;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--navy)}
+  .sig small{display:block;font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-top:4px}
+
+  /* ===== Services ===== */
+  .services{background:var(--cream)}
+  .svc-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px}
+  .svc-head h2{font-size:clamp(30px,4.4vw,48px);max-width:16ch}
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  .svc-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;
+    transition:transform .3s ease,box-shadow .3s ease,border-color .3s;position:relative;overflow:hidden}
+  .svc-card::before{content:"";position:absolute;left:0;top:0;height:4px;width:0;background:var(--gold);transition:width .35s}
+  .svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+  .svc-card:hover::before{width:100%}
+  .svc-ic{width:52px;height:52px;border-radius:14px;background:var(--navy);color:var(--gold-soft);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+  .svc-ic svg{width:26px;height:26px}
+  .svc-card h3{font-size:23px;margin-bottom:6px}
+  .svc-card .tag{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px}
+  .svc-card p{color:var(--slate);font-size:15px}
+
+  /* ===== Video / decompression feature ===== */
+  .feature{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+  .feature::before{content:"";position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,160,78,.22),transparent 70%);top:-160px;right:-120px}
+  .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,64px);align-items:center;position:relative;z-index:2}
+  .feature h2{color:#fff;font-size:clamp(28px,4vw,44px);margin-bottom:18px}
+  .feature .lead{color:#cfe0f0}
+  .feature ul{list-style:none;margin-top:24px;display:grid;gap:14px}
+  .feature li{display:flex;gap:12px;align-items:flex-start;color:#e6eef7;font-size:15.5px}
+  .feature li svg{flex:0 0 auto;width:22px;height:22px;color:var(--gold-soft);margin-top:2px}
+  .video-card{position:relative;display:block;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:16/9;background:#000}
+  .video-card iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .video-stack{display:grid;gap:20px}
+  .video-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s,filter .4s}
+  .video-card:hover img{transform:scale(1.05);filter:brightness(.78)}
+  .video-card .play{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2}
+  .video-card .play span{
+    width:74px;height:74px;border-radius:50%;background:rgba(201,160,78,.95);
+    display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.6);
+    transition:transform .25s}
+  .video-card:hover .play span{transform:scale(1.08)}
+  .video-card .play svg{width:30px;height:30px;color:#fff;margin-left:4px}
+  .video-card .label{
+    position:absolute;left:0;right:0;bottom:0;z-index:2;padding:30px 20px 16px;
+    background:linear-gradient(transparent,rgba(6,18,40,.85));color:#fff;font-weight:600;font-size:14px}
+
+  /* ===== Team ===== */
+  .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px}
+  .member{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s}
+  .member:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .member .photo{aspect-ratio:3/4;overflow:hidden;background:var(--cream)}
+  .member .photo img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .6s}
+  .member:hover .photo img{transform:scale(1.05)}
+  .member .body{padding:26px 26px 30px}
+  .member h3{font-size:24px;margin-bottom:2px}
+  .member .role{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  .member p{color:var(--slate);font-size:14.5px}
+  .member .more{margin-top:16px;font-weight:700;font-size:13px;color:var(--navy);cursor:pointer;display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:0}
+  .member .more:hover{color:var(--gold)}
+  .member p.bio{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+  .member p.bio.open{-webkit-line-clamp:unset}
+
+  /* ===== Testimonials ===== */
+  .testi{background:var(--cream)}
+  .google-badge{
+    display:inline-flex;align-items:center;gap:14px;margin-top:22px;
+    background:#fff;border:1px solid var(--line);border-radius:999px;
+    padding:12px 26px 12px 20px;box-shadow:var(--shadow-sm);
+    transition:transform .25s ease,box-shadow .25s ease}
+  .google-badge:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .google-badge .g-logo{width:30px;height:30px;flex:0 0 auto}
+  .google-badge .g-text{display:flex;flex-direction:column;text-align:left;line-height:1.15}
+  .google-badge .g-stars{color:var(--gold);letter-spacing:2px;font-size:18px;display:flex;align-items:center;gap:8px}
+  .google-badge .g-stars b{font-family:var(--sans);color:var(--navy);font-size:16px;letter-spacing:0}
+  .google-badge .g-sub{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--slate);margin-top:2px}
+  .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+  .quote{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px;display:flex;flex-direction:column;box-shadow:var(--shadow-sm)}
+  .quote .stars{color:var(--gold);letter-spacing:3px;margin-bottom:14px;font-size:16px}
+  .quote p{color:var(--ink);font-size:15px;flex:1}
+  .quote .who{margin-top:20px;font-family:var(--serif);font-size:21px;color:var(--navy);font-weight:600}
+  .quote .src{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate)}
+  .reviews-cta{text-align:center;margin-top:42px}
+
+  /* ===== Hours + Contact ===== */
+  .contact{background:var(--navy-deep);color:#e6eef7}
+  .contact h2{color:#fff;font-size:clamp(30px,4.4vw,48px)}
+  .contact .eyebrow{color:var(--gold-soft)}
+  .contact .eyebrow::before{background:var(--gold-soft)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,60px);align-items:start;margin-top:42px}
+  .info-block{display:grid;gap:26px}
+  .info-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px 28px}
+  .info-card h3{color:#fff;font-size:21px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .info-card h3 svg{width:20px;height:20px;color:var(--gold-soft)}
+  .hours-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed rgba(255,255,255,.14);font-size:14.5px}
+  .hours-row:last-child{border-bottom:0}
+  .hours-row span:first-child{color:#cfe0f0}
+  .hours-row span:last-child{font-weight:600;color:#fff}
+  .info-card a{color:#fff;font-weight:600}
+  .info-card a:hover{color:var(--gold-soft)}
+  .contact-line{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;font-size:15px}
+  .contact-line svg{flex:0 0 auto;width:20px;height:20px;color:var(--gold-soft);margin-top:3px}
+  .map{border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.12);height:220px;margin-top:6px}
+  .map iframe{width:100%;height:100%;border:0;filter:grayscale(.2)}
+
+  /* Form */
+  .form-card{background:#fff;border-radius:var(--radius);padding:clamp(26px,3vw,38px);box-shadow:var(--shadow);color:var(--ink)}
+  .form-card h3{font-size:26px;margin-bottom:4px}
+  .form-card .sub{color:var(--slate);font-size:14.5px;margin-bottom:22px}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.04em;color:var(--navy);margin-bottom:6px}
+  .field input,.field textarea{
+    width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;
+    font-family:var(--sans);font-size:15px;color:var(--ink);background:var(--cream);transition:border-color .2s,background .2s}
+  .field textarea{min-height:110px;resize:vertical}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--gold);background:#fff}
+  .form-card .btn{width:100%;margin-top:6px}
+  .form-note{font-size:12.5px;color:var(--slate);text-align:center;margin-top:14px}
+
+  /* ===== Footer ===== */
+  footer.site{background:#06182d;color:#9fb6cd;font-size:14px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-block:clamp(46px,6vw,70px)}
+  footer.site img.logo{height:54px;width:auto;margin-bottom:18px;filter:brightness(0) invert(1);opacity:.95}
+  footer.site h4{color:#fff;font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}
+  footer.site ul{list-style:none;display:grid;gap:10px}
+  footer.site a:hover{color:var(--gold-soft)}
+  footer.site .bottom{border-top:1px solid rgba(255,255,255,.1);padding-block:20px;text-align:center;font-size:13px;color:#7d96ad}
+
+  /* Floating mobile call bar */
+  .mobile-bar{display:none}
+
+  /* ===== Responsive ===== */
+  @media(max-width:980px){
+    .about-grid,.feature-grid,.contact-grid{grid-template-columns:1fr}
+    .about-media{order:-1;max-width:480px;margin-inline:auto}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:860px){
+    nav.main,.nav-cta .btn{display:none}
+    .menu-toggle{display:flex}
+    nav.main{
+      position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;
+      align-items:stretch;gap:0;padding:8px 0;border-bottom:1px solid var(--line);
+      box-shadow:var(--shadow);transform:translateY(-12px);opacity:0;pointer-events:none;transition:.28s}
+    nav.main.open{display:flex;transform:translateY(0);opacity:1;pointer-events:auto}
+    nav.main a{padding:14px clamp(18px,5vw,40px);border-bottom:1px solid var(--line)}
+    nav.main a::after{display:none}
+    .menu-toggle.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+    .menu-toggle.open span:nth-child(2){opacity:0}
+    .menu-toggle.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  }
+  @media(max-width:560px){
+    .form-row{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+    .topbar .tb-right{display:none}
+    .topbar .wrap{justify-content:center}
+    .about-media .badge{left:0}
+    .hero-meta{gap:14px 22px}
+    body{padding-bottom:70px}
+    .mobile-bar{
+      display:grid;grid-template-columns:1fr 1fr;position:fixed;bottom:0;left:0;right:0;z-index:70;
+      background:#fff;border-top:1px solid var(--line);box-shadow:0 -8px 24px -16px rgba(0,0,0,.4)}
+    .mobile-bar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;font-weight:700;font-size:14px}
+    .mobile-bar a.call{color:var(--navy)}
+    .mobile-bar a.book{background:var(--gold);color:#fff}
+    .mobile-bar svg{width:18px;height:18px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site">
+  <div class="topbar">
+    <div class="wrap">
+      <a href="tel:+18322098973">📞 Call or Text: +1 832-209-8973</a>
+      <div class="tb-right">
+        <a href="mailto:info@empirechiropracticandrehab.com">✉ info@empirechiropracticandrehab.com</a>
+        <a href="https://maps.google.com/?q=601+Sawyer+St+Suite+330+Houston+TX+77007" target="_blank" rel="noopener">📍 601 Sawyer St, Suite 330, Houston</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap navrow">
+    <a class="brand" href="#top" aria-label="Empire Chiropractic and Rehab home">
+      <img src="https://static.wixstatic.com/media/2d0c9a_50abb442fb06418c8f8304d70780fc18~mv2.png/v1/fill/w_320,h_160,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/empire-chiropractic-and-rehab-logo-cmyk-padding.png" alt="Empire Chiropractic and Rehab logo" />
+    </a>
+    <nav class="main" id="nav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#team">Our Team</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-gold" href="https://empirechiropracticandrehab.janeapp.com/" target="_blank" rel="noopener">Book Appointment</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <span class="eyebrow" style="color:var(--gold-soft)">Sports Chiropractic · Houston, TX</span>
+      <h1>Your Body, <span class="accent">Your Kingdom.</span></h1>
+      <p>Experience chiropractic care at its best. The team at Empire Chiropractic and Rehab is here to help you recover from injury, move freely, and regain the life you deserve.</p>
+      <div class="hero-btns">
+        <a class="btn btn-gold" href="#contact">New Patient Appointment</a>
+        <a class="btn btn-ghost" href="#services">Explore Our Services</a>
+      </div>
+      <div class="hero-meta">
+        <div><b>Since 2011</b><span>Trusted Care</span></div>
+        <div><b>5.0★</b><span>Patient Reviews</span></div>
+        <div><b>1-on-1</b><span>Personalized Treatment</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRUST STRIP ===================== -->
+<div class="trust">
+  <div class="wrap">
+    <span><span class="dot">✦</span> Chiropractic Adjustments</span>
+    <span><span class="dot">✦</span> Spinal Decompression</span>
+    <span><span class="dot">✦</span> Auto &amp; Sports Injury</span>
+    <span><span class="dot">✦</span> Massage Therapy</span>
+    <span><span class="dot">✦</span> Cupping &amp; IASTM</span>
+  </div>
+</div>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-text">
+      <span class="eyebrow">About Empire</span>
+      <h2>Chiropractic care built on integrity, devotion &amp; compassion.</h2>
+      <p class="lead">At Empire Chiropractic and Rehab we offer the highest standard of patient care to ensure your physical health. Since 2011, Dr. Banh has treated patients with integrity, devotion, and compassion.</p>
+      <p>Our mission is to help you regain function and improve your overall quality of life. We are a chiropractic office that focuses on health, sports injuries, and rehabilitation for spine-related injuries — helping people live a pain-free life through chiropractic care.</p>
+      <p>Our team of experts is dedicated to providing the best care possible, offering chiropractic adjustments, massage therapy, spinal decompression, and rehabilitation exercises to help you achieve your health goals.</p>
+      <div class="sig">Dr. Bryan Banh, D.C.
+        <small>Founder · Doctor of Chiropractic</small>
+      </div>
+    </div>
+    <div class="about-media">
+      <img src="https://static.wixstatic.com/media/2d0c9a_a53ba83d3dc44b639d59792fd8d40828~mv2.jpg/v1/fill/w_600,h_760,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Untitled.jpg" alt="Dr. Bryan Banh, Chiropractor at Empire Chiropractic and Rehab" />
+      <div class="badge"><b>13+</b><span>Years caring for Houston</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head">
+      <div>
+        <span class="eyebrow">A Personal Approach</span>
+        <h2>Services we provide</h2>
+      </div>
+      <p class="lead">We treat the whole body — not just an isolated injury — with personalized, one-on-one treatments designed for long-term health and wellness.</p>
+    </div>
+    <div class="svc-grid">
+
+      <article class="svc-card">
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M8 7h8M7 11h10M8 15h8"/></svg></div>
+        <span class="tag">Putting You First</span>
+        <h3>Chiropractic</h3>
+        <p>We treat the whole body, not an isolated injury. A spinal evaluation and assessment helps us understand and correct your spinal alignment conditions with personalized care.</p>
+      </article>
+
+      <article class="svc-card">
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 20c0-4 2-7 6-7s6 3 6 7M9 8a3 3 0 1 0 6 0 3 3 0 0 0-6 0z"/></svg></div>
+        <span class="tag">The Tools You Need</span>
+        <h3>Sports Injury</h3>
+        <p>We find the root of the problem and test your strengths and weaknesses to build your rehab and exercise program. Cutting-edge equipment and dedicated care guide your recovery.</p>
+      </article>
+
+      <article class="svc-card">
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 13l2-5h11l3 5M5 13h15v4H5zM7 17v2M17 17v2"/></svg></div>
+        <span class="tag">Patient-Centered</span>
+        <h3>Auto / Personal Injury</h3>
+        <p>Injured in an auto accident? We hear your story, take detailed notes of your medical history, and create an individualized treatment plan aimed at the functional goals we set together.</p>
+      </article>
+
+      <article class="svc-card">
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M7 6l5-3 5 3M7 18l5 3 5-3M5 12h14"/></svg></div>
+        <span class="tag">Gentle, Safe &amp; Effective</span>
+        <h3>Spinal Decompression</h3>
+        <p>For a herniated or bulged disc, Non-Surgical Spinal Decompression is a non-invasive way to take pressure off the injured disc — relieving back pain and nerve conditions like sciatica.</p>
+      </article>
+
+      <article class="svc-card">
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 14c2 2 5 3 8 3s6-1 8-3M6 10a6 6 0 0 1 12 0"/></svg></div>
+        <span class="tag">Muscle Relaxation</span>
+        <h3>Massage Therapy</h3>
+        <p>Our skilled Licensed Massage Therapist relieves stress and reduces pain. Sports, deep tissue, and pre-natal massage offered in 60 and 90 minute sessions.</p>
+      </article>
+
+      <article class="svc-card">
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="16" r="3"/><path d="M11 8h6M7 16h2"/></svg></div>
+        <span class="tag">Tools of the Trade</span>
+        <h3>Cupping &amp; IASTM</h3>
+        <p>Instrument-assisted soft tissue mobilization manipulates skin, myofascia, muscles and tendons, while cupping uses gentle suction to ease back pain, neck pain, and headaches.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURE / VIDEO ===================== -->
+<section class="feature">
+  <div class="wrap feature-grid">
+    <div>
+      <span class="eyebrow" style="color:var(--gold-soft)">See It In Action</span>
+      <h2>Advanced therapies, a personal touch.</h2>
+      <p class="lead">From decompression to mobility skill training, every plan is built around you and your goals — backed by the best tools in the industry.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> One-on-one treatment, never rushed</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Care that transfers to your training &amp; daily life</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Prevention &amp; mobility education for the long term</li>
+      </ul>
+      <a class="btn btn-gold" href="#contact" style="margin-top:30px">Schedule Your First Visit</a>
+    </div>
+    <div class="video-stack">
+      <a class="video-card" href="https://www.youtube.com/watch?v=1ksYEDryfWI" target="_blank" rel="noopener" aria-label="Watch patient testimonial video">
+        <img src="https://i.ytimg.com/vi/1ksYEDryfWI/maxresdefault.jpg" alt="Patient testimonial video" loading="lazy"
+             onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/1ksYEDryfWI/hqdefault.jpg'">
+        <span class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></span>
+        <span class="label">Patient Testimonial</span>
+      </a>
+      <a class="video-card" href="https://www.youtube.com/watch?v=VFteGGfvk4k" target="_blank" rel="noopener" aria-label="Watch therapies video">
+        <img src="https://static.wixstatic.com/media/2d0c9a_822884a0861c4d1581d6f6c8d91ea1c7~mv2.png/v1/fill/w_960,h_540,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2d0c9a_822884a0861c4d1581d6f6c8d91ea1c7~mv2.png" alt="Therapies at Empire Chiropractic video" loading="lazy"
+             onerror="this.onerror=null;this.src='https://static.wixstatic.com/media/2d0c9a_2dd6394078174f01979c67dec45a8ffc~mv2.png/v1/fill/w_960,h_540,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2d0c9a_2dd6394078174f01979c67dec45a8ffc~mv2.png'">
+        <span class="play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></span>
+        <span class="label">Our Therapies</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TEAM ===================== -->
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:48px">
+      <span class="eyebrow">Committed to Health</span>
+      <h2 style="font-size:clamp(30px,4.4vw,48px)">Who we are</h2>
+      <p class="lead">A team of caregivers dedicated to your recovery, your comfort, and your long-term wellness.</p>
+    </div>
+    <div class="team-grid">
+
+      <article class="member">
+        <div class="photo"><img src="https://static.wixstatic.com/media/2d0c9a_a53ba83d3dc44b639d59792fd8d40828~mv2.jpg/v1/fill/w_460,h_613,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Untitled.jpg" alt="Dr. Bryan Banh, Chiropractor"></div>
+        <div class="body">
+          <h3>Dr. Bryan Banh</h3>
+          <div class="role">Chiropractor</div>
+          <p class="bio">Dr. Bryan Banh is a Texas native — born in Brenham, raised in Houston, and now a proud Houstonian. He attended the University of Houston and earned his Doctor of Chiropractic degree at Palmer College of Chiropractic. He has a special interest in creating partnerships with his patients. The road to recovery requires trust and hard work between doctor and patient, and Dr. Banh goes above and beyond to build that trusting relationship. He believes keeping patients proactive about recovery shortens treatment time and keeps them healthier in the future.</p>
+          <button class="more" onclick="toggleBio(this)">Read more ↓</button>
+        </div>
+      </article>
+
+      <article class="member">
+        <div class="photo"><img src="https://static.wixstatic.com/media/2d0c9a_76e40986eb3242a68be55526a0f2fbb1~mv2.png/v1/crop/x_109,y_0,w_769,h_1405/fill/w_460,h_613,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_3174_heic.png" alt="Nikita Morrow, Massage Therapist"></div>
+        <div class="body">
+          <h3>Nikita Morrow</h3>
+          <div class="role">Massage Therapist</div>
+          <p class="bio">Known for her signature firm pressure and ability to find the knots you didn't know you had, Nikita is dedicated to her craft. Born and raised in Houston, she began giving free back rubs to family at a young age. After undergraduate studies at Wiley College, she continued her massage education at San Jacinto College. As our longest-serving therapist, she treats every patient with patience and compassion, using myofascial trigger point release, static stretching, and more to encourage good blood flow and flexibility throughout the body.</p>
+          <button class="more" onclick="toggleBio(this)">Read more ↓</button>
+        </div>
+      </article>
+
+      <article class="member">
+        <div class="photo"><img src="https://static.wixstatic.com/media/2d0c9a_34bb43b063c44299ba77ca7118351e6a~mv2.jpg/v1/crop/x_0,y_0,w_2797,h_4000/fill/w_460,h_613,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/20240411_103037.jpg" alt="Natalie Nguyen and Bianca Johnson"></div>
+        <div class="body">
+          <h3>Natalie Nguyen &amp; Bianca Johnson</h3>
+          <div class="role">Office Manager · Clinical Assistant</div>
+          <p class="bio">Natalie is the clinic's office manager and scheduling coordinator. She brings over 15 years of experience in healthcare administration and creates a warm, happy environment so that every patient feels at home. Born in Boston, raised in St. Louis, and now a proud Texan, Natalie is a wife and a mother to a sweet 2-year-old boy. Together with our clinical assistant Bianca, they keep the clinic running smoothly and make every visit welcoming.</p>
+          <button class="more" onclick="toggleBio(this)">Read more ↓</button>
+        </div>
+      </article>
+
+    </div>
+    <div class="center" style="margin-top:42px">
+      <a class="btn btn-outline" href="https://empirechiropracticandrehab.janeapp.com/" target="_blank" rel="noopener">Book With Our Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INSURANCE ===================== -->
+<section style="padding-block:clamp(40px,6vw,70px)">
+  <div class="wrap center">
+    <span class="eyebrow">Approved Provider For</span>
+    <h2 style="font-size:clamp(24px,3.4vw,34px);margin-bottom:34px">We work with your insurance</h2>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(28px,6vw,70px)">
+      <img src="https://static.wixstatic.com/media/2d0c9a_54e8f72548ce460e9359c4c478489bb8~mv2.png/v1/fill/w_330,h_103,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/UnitedHealthcare_(logo)_svg.png" alt="UnitedHealthcare" style="max-height:64px;width:auto;object-fit:contain">
+      <img src="https://static.wixstatic.com/media/2d0c9a_5393a7baaf334164a42c622ac7f30778~mv2.png/v1/fill/w_257,h_184,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/BCBSlogo.png" alt="Blue Cross Blue Shield" style="max-height:80px;width:auto;object-fit:contain">
+      <img src="https://static.wixstatic.com/media/2d0c9a_cd0e4e5b374049288e969e9e9c3c0a42~mv2.jpg/v1/fill/w_316,h_178,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Aetna-Logo.jpg" alt="Aetna" style="max-height:80px;width:auto;object-fit:contain">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="testi" id="testimonials">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:48px">
+      <span class="eyebrow">What Our Patients Think</span>
+      <h2 style="font-size:clamp(30px,4.4vw,48px)">Testimonials</h2>
+      <a class="google-badge" href="https://www.google.com/search?q=empire+chiropractic+and+rehab+llc+houston+reviews" target="_blank" rel="noopener" aria-label="5 star rating on Google">
+        <svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18c-.44-1.32-.69-2.73-.69-4.18s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+        <span class="g-text">
+          <span class="g-stars">★★★★★ <b>5.0</b></span>
+          <span class="g-sub">Rated on Google Reviews</span>
+        </span>
+      </a>
+    </div>
+    <div class="testi-grid">
+
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>Dr. Banh is phenomenal! Not only has he helped me rehab from a herniated disc, he's been just as great at educating me on prevention. His therapy was right in line with my powerlifting — so easy to transfer to the gym. No session was ever rushed and it is always personalized. Thank you for keeping me on the platform.</p>
+        <div class="who">Kathy B.<div class="src">Google Review</div></div>
+      </div>
+
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>If you're looking for a clinic for your chiropractic and physical therapy needs, I'd highly recommend Empire. I've been with Dr. Bryan for close to 3 years. He always listens, finds long-term solutions, takes his time showing exercises, and explains every adjustment. If you want a doctor who listens to your needs, choose Dr. Bryan.</p>
+        <div class="who">Jonathan T.<div class="src">Google Review</div></div>
+      </div>
+
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>Dr. Banh is amazing! I first reached out with IT band pain during my first half-marathon training. He took time to explain his methodology and gave me a ton of exercises — I never had a flare up the rest of training. His staff is so nice and making appointments is a breeze. I've never written a review before, but that's how much I appreciate Dr. Banh and his staff.</p>
+        <div class="who">Anuja D.<div class="src">Google Review</div></div>
+      </div>
+
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>Empire chiro/rehab was and is a game changer for me. I spent nearly 8 months chasing back pain from a lumbar disc bulge until a friend recommended Dr. Banh. After a thorough evaluation, biweekly decompression, adjustments, and mobility training allowed a full, pain-free return to intense fitness. Dr. B has a lot of tools in his toolkit. I definitely recommend this practice!</p>
+        <div class="who">Talia S.<div class="src">Google Review</div></div>
+      </div>
+
+    </div>
+    <div class="reviews-cta">
+      <a class="btn btn-outline" href="https://www.google.com/search?q=empire+chiropractic+and+rehab+llc+houston+reviews" target="_blank" rel="noopener">View More Reviews on Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Here When You Need Us</span>
+      <h2>Schedule your first visit</h2>
+      <p class="lead" style="color:#cfe0f0">New Patient Special — includes Consultation, Exam &amp; First Treatment.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="info-block">
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Office Hours</h3>
+          <div class="hours-row"><span>Monday</span><span>9:30am – 2:00pm</span></div>
+          <div class="hours-row"><span>Tuesday</span><span>9:30am – 6:00pm</span></div>
+          <div class="hours-row"><span>Wednesday</span><span>9:30am – 6:00pm</span></div>
+          <div class="hours-row"><span>Thursday</span><span>9:30am – 6:00pm</span></div>
+          <div class="hours-row"><span>Friday</span><span>9:30am – 2:00pm</span></div>
+          <div class="hours-row"><span>Sat – Sun</span><span>Closed</span></div>
+        </div>
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 3.2 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> Contact Us</h3>
+          <div class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7 12.8 12.8 0 0 0 .7 2.8 2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4 12.8 12.8 0 0 0 2.8.7 2 2 0 0 1 1.8 2z"/></svg> <a href="tel:+18322098973">+1 832-209-8973</a> <span style="color:#9fb6cd">(Call or Text)</span></div>
+          <div class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg> <a href="mailto:info@empirechiropracticandrehab.com">info@empirechiropracticandrehab.com</a></div>
+          <div class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 601 Sawyer St, Suite 330, Houston, TX 77007</div>
+          <div class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg> Fax: (832) 415-1933</div>
+          <div class="map">
+            <iframe title="Empire Chiropractic location map" loading="lazy" src="https://www.google.com/maps?q=601%20Sawyer%20St%20Suite%20330%20Houston%20TX%2077007&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3>New Patient Special</h3>
+        <p class="sub">Includes: Consultation, Exam &amp; First Treatment. Fill out the form and we'll be in touch — or call/text us anytime.</p>
+        <form id="leadForm" onsubmit="return submitLead(event)">
+          <div class="form-row">
+            <div class="field"><label for="fn">First name*</label><input id="fn" name="fn" required></div>
+            <div class="field"><label for="ln">Last name*</label><input id="ln" name="ln" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="em">Email*</label><input id="em" name="em" type="email" required></div>
+            <div class="field"><label for="ph">Phone*</label><input id="ph" name="ph" type="tel" required></div>
+          </div>
+          <div class="field"><label for="msg">Message*</label><textarea id="msg" name="msg" required placeholder="Tell us a little about what's bothering you and your preferred days/times."></textarea></div>
+          <button class="btn btn-gold" type="submit">Submit Request</button>
+          <a class="btn btn-outline" href="https://empirechiropracticandrehab.janeapp.com/" target="_blank" rel="noopener" style="width:100%;margin-top:10px">Or Book Online Instantly</a>
+          <p class="form-note">By submitting, your email app opens a pre-filled message to our front desk.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site">
+  <div class="wrap foot-grid">
+    <div>
+      <img class="logo" src="https://static.wixstatic.com/media/2d0c9a_50abb442fb06418c8f8304d70780fc18~mv2.png/v1/fill/w_320,h_160,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/empire-chiropractic-and-rehab-logo-cmyk-padding.png" alt="Empire Chiropractic and Rehab">
+      <p style="max-width:36ch">Your Body, Your Kingdom. Helping Houston recover, move, and live pain-free since 2011.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Visit Us</h4>
+      <ul>
+        <li><a href="tel:+18322098973">+1 832-209-8973 (Call/Text)</a></li>
+        <li><a href="mailto:info@empirechiropracticandrehab.com">info@empirechiropracticandrehab.com</a></li>
+        <li>601 Sawyer St, Suite 330<br>Houston, TX 77007</li>
+        <li><a href="https://empirechiropracticandrehab.janeapp.com/" target="_blank" rel="noopener" style="color:var(--gold-soft);font-weight:700">Book Appointment →</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottom">© 2025 Empire Chiropractic and Rehab, LLC. All rights reserved.</div>
+</footer>
+
+<!-- Mobile sticky call/book bar -->
+<div class="mobile-bar">
+  <a class="call" href="tel:+18322098973"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> Call / Text</a>
+  <a class="book" href="https://empirechiropracticandrehab.janeapp.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Book Now</a>
+</div>
+
+<script>
+  // Mobile menu
+  const toggle=document.getElementById('menuToggle');
+  const nav=document.getElementById('nav');
+  toggle.addEventListener('click',()=>{nav.classList.toggle('open');toggle.classList.toggle('open');});
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.classList.remove('open');}));
+
+  // Read more bios
+  function toggleBio(btn){
+    const bio=btn.previousElementSibling;
+    const open=bio.classList.toggle('open');
+    btn.textContent=open?'Read less ↑':'Read more ↓';
+  }
+
+  // Lead form -> mailto
+  function submitLead(e){
+    e.preventDefault();
+    const v=id=>encodeURIComponent(document.getElementById(id).value);
+    const subject=encodeURIComponent('New Patient Special Request');
+    const body=
+      'First name: '+v('fn')+'%0D%0A'+
+      'Last name: '+v('ln')+'%0D%0A'+
+      'Email: '+v('em')+'%0D%0A'+
+      'Phone: '+v('ph')+'%0D%0A%0D%0A'+
+      'Message:%0D%0A'+v('msg');
+    window.location.href='mailto:info@empirechiropracticandrehab.com?subject='+subject+'&body='+body;
+    return false;
+  }
+</script>
+</body>
+</html>
